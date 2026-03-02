@@ -1,0 +1,2 @@
+import random as ran
+print("Monte Carlo Simulation: Phase 1 Starting...")
