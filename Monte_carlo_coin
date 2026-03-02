@@ -1,0 +1,23 @@
+import random as ran
+amount = int(input("How many times do you want to flip the coin? "))
+choice = ran.choice(["heads", "tails"])
+h = 0
+t = 0
+for i in range(amount):
+    choice = ran.choice(["heads", "tails"])
+    #print (choice)
+    if choice == "heads":
+       h += 1
+    else:
+        t += 1
+
+theoretical = 0.5
+print(f"The total number of head flips are {h}")
+print(f"The total number of tail flips are {t}")
+
+empirical_of_Heads = h / amount
+empirical_of_Tails = t / amount
+print(f"The empirical value of heads is {empirical_of_Heads}")
+print(f"The empirical value of tails is {empirical_of_Tails}")
+difference = theoretical - empirical_of_Heads
+print(f"The difference is {round(difference, 3)}")
